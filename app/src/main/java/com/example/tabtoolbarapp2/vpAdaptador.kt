@@ -11,7 +11,7 @@ class vpAdaptador(fa:FragmentActivity):FragmentStateAdapter(fa) {
         private const val ARG_OBJECT = "object"
     }
 
-    override fun getItemCount(): Int = 3
+    override fun getItemCount(): Int = 4
 
     override fun createFragment(position: Int): Fragment {
         val fragmento = VistaFragmento()
@@ -19,5 +19,15 @@ class vpAdaptador(fa:FragmentActivity):FragmentStateAdapter(fa) {
             putInt(ARG_OBJECT,position+1)
         }
         return fragmento
+
+       /* return when(position){
+            0->{
+                VistaFragmento()
+            }
+            1 ->{
+                OtroFragmento()
+            }
+        }*/
+
     }
 }
